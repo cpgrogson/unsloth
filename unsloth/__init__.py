@@ -74,6 +74,10 @@ def _print_banner():
     import torch
     cuda_available = torch.cuda.is_available()
     device_info = torch.cuda.get_device_name(0) if cuda_available else "CPU only"
+    # Also show available VRAM when a GPU is present, useful for planning batch sizes
+    if cuda_available:
+        vram_gb = torch.cuda.get_device_properties(0).total_memory / (1024 ** 3)
+        device_info = f"{device_info} ({vram_gb:.1f} GB VRAM)"
     print(
         f"🦥 Unsloth v{__version__} | "
         f"Device: {device_info} | "
