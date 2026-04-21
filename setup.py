@@ -59,10 +59,7 @@ setup(
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
-        "Topic",
-    [
-        "llm",qlora",
-        "transform learning",
+        "Topic :: Scientific/Engineering :: Artificial Intelligence",
     ],
     entry_points={
         "console_scripts": [
