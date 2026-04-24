@@ -39,6 +39,8 @@ setup(
             "black",
             "isort",
             "flake8",
+            # Added mypy for type checking during local development
+            "mypy",
         ],
         "huggingface": [
             "huggingface_hub>=0.20.0",
